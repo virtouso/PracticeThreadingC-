@@ -16,11 +16,11 @@ void Task1()
 {
     for (int i = 0; i < 1000; i++)
     {
-        lock (g)
-        {
+      //  lock (g)
+     //   {
             Global.Shared++;
             Console.WriteLine("t1-" + Global.Shared);
-        }
+     //   }
     }
 }
 
@@ -30,11 +30,11 @@ void Task2()
     {
         Task.Run(() =>
         {
-            lock (g)
-            {
+      //      lock (g)
+        //    {
                 Global.Shared++;
                 Console.WriteLine("t2-" + Global.Shared);
-            }
+         //   }
             
         });
     }

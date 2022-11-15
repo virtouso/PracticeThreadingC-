@@ -2,5 +2,5 @@
 
 public   class Global
 {
-   public static  int Shared;
+   public volatile static  int Shared;
 }
